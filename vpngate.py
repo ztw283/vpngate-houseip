@@ -85,15 +85,13 @@ EDGE_HOSTS = [
     h.strip()
     for h in os.environ.get(
         "EDGE_HOSTS",
-        "cdn.667891.xyz:443,cf.itv888.cn:443,"
-        "p.etime.vip:443,fn.130519.xyz:443,"
-        "224322.xyz:443,www.mfyx.cn:443,",
+        "",
     ).split(",")
     if h.strip()
 ]
 
 # 优选 API 地址配置 (支持逗号分隔多个，可配置在 GitHub Action Secret / Env 中)
-OPTIMAL_API = os.environ.get("OPTIMAL_API", "https://cf.090227.xyz/ct?ips=6&port=443")
+OPTIMAL_API = os.environ.get("OPTIMAL_API", "https://raw.githubusercontent.com/ztw283/bestip/refs/heads/main/ip.txt")
 
 NODES_URL = os.environ.get("NODES_URL", "https://ztw283.github.io/vpngate-houseip/nodes.txt")
 
